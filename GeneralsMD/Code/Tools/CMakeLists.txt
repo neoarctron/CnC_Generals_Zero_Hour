@@ -1,8 +1,12 @@
-# Build the "WorldBuilder" map editor
-add_subdirectory(WorldBuilder)
+# Build tools
 
-# Build the "ParticleEditor" plugin dll.
-add_subdirectory(ParticleEditor)
-
-# Build the "GUIEdit" tool.
+add_subdirectory(Compress)
+add_subdirectory(CRCDiff)
+add_subdirectory(DebugWindow)
 add_subdirectory(GUIEdit)
+add_subdirectory(ImagePacker)
+add_subdirectory(ParticleEditor)
+add_subdirectory(textureCompress)
+add_subdirectory(timingTest)
+add_subdirectory(versionUpdate)
+add_subdirectory(WorldBuilder)

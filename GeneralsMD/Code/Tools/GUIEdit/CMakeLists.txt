@@ -1,4 +1,3 @@
-# Set source files
 set(GUIEDIT_SRC
     "Include/DialogProc.h"
     "Include/EditWindow.h"
@@ -36,7 +35,6 @@ set(GUIEDIT_SRC
     "Source/Dialog Procedures/TextEntryProperties.cpp"
 )
 
-# Targets to build.
 add_executable(guiedit WIN32)
 
 target_include_directories(guiedit PRIVATE

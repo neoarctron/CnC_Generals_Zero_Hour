@@ -25,6 +25,10 @@ target_compile_definitions(GameEngine PRIVATE
     IG_DEBUG_STACKTRACE
 )
 
+target_compile_definitions(GameEngine PUBLIC
+    $<$<CONFIG:Debug>:_DEBUG>
+)
+
 target_sources(GameEngine PRIVATE
     Include/Common/AcademyStats.h
     Include/Common/ActionManager.h

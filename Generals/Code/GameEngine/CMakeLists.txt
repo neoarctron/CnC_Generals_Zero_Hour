@@ -25,6 +25,10 @@ target_compile_definitions(GameEngineG PRIVATE
     IG_DEBUG_STACKTRACE
 )
 
+target_compile_definitions(GameEngineG PUBLIC
+    $<$<CONFIG:Debug>:_DEBUG>
+)
+
 target_sources(GameEngineG PRIVATE
     Source/Common/Thing/DrawModule.cpp
     Source/Common/Thing/Module.cpp

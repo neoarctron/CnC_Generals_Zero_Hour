@@ -63,7 +63,7 @@ if(WIN32 OR "${CMAKE_SYSTEM}" MATCHES "Windows")
         get_filename_component(shdfilename ${shdfile} NAME)
         add_custom_command(
             OUTPUT ${CMAKE_CURRENT_SOURCE_DIR}/${shdfilename}_code.h
-            COMMAND ${CMAKE_CURRENT_SOURCE_DIR}/shdpp.exe ${shdfilename}
+            COMMAND wine ${CMAKE_CURRENT_SOURCE_DIR}/shdpp.exe ${shdfilename}
             WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
         )
         list(APPEND WWSHADE_SRC ${CMAKE_CURRENT_SOURCE_DIR}/${shdfilename}_code.h)

@@ -27,6 +27,8 @@ ENV WINEDEBUG=-all
 ENV WINEARCH=win32
 
 
+
+
 COPY vc6-toolchain.cmake /opt/work/vc6-toolchain.cmake
 
 COPY tools /opt/work/tools

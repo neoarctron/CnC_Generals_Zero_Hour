@@ -1,11 +1,16 @@
 #!/bin/bash
-
+echo $PWD
 cd /opt/work/repo/ 
 export TOOLS_DIR="/opt/work/tools/"
 export PATH="$TOOLS_DIR:$PATH"
 
+echo $TOOLS_DIR
+echo $PATH
+echo $PWD
+ls /opt/work
+ls /opt
 cd /opt/work/build/
-
+echo $PWD
 cmake -DCMAKE_TOOLCHAIN_FILE="/opt/work/vc6-toolchain.cmake" \
       -DCMAKE_BUILD_TYPE=Release \
       -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \

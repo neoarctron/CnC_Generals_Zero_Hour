@@ -63,7 +63,7 @@ add_subdirectory(GeneralsMD/Code/Libraries/Source/EABrowserDispatch)
 
 # Do we want to build extra SDK stuff or just the game binary?
 option(THYME_ZEROHOUR_PROJECT "Build Zero Hour code." ON)
-option(THYME_GENERALS_PROJECT "Build Generals code." ON) # TODO
+option(THYME_GENERALS_PROJECT "Build Generals code." OFF) # TODO
 
 if(NOT THYME_ZEROHOUR_PROJECT AND NOT THYME_GENERALS_PROJECT)
     set(THYME_ZEROHOUR_PROJECT TRUE)

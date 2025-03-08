@@ -1,15 +1,12 @@
 #!/bin/bash
 
-cd /opt/work/repo/
-
-export SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-export PARENT_DIR="$(dirname "$SCRIPT_DIR")"
-export TOOLS_DIR="$PARENT_DIR/tools"
+cd /opt/work/repo/ 
+export TOOLS_DIR="/opt/work/tools/"
 export PATH="$TOOLS_DIR:$PATH"
 
 cd /opt/work/build/
 
-cmake -DCMAKE_TOOLCHAIN_FILE="$PARENT_DIR/vc6-toolchain.cmake" \
+cmake -DCMAKE_TOOLCHAIN_FILE="/opt/work/vc6-toolchain.cmake" \
       -DCMAKE_BUILD_TYPE=Release \
       -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
       -DCMAKE_MSVC_RUNTIME_LIBRARY="MultiThreaded$<$<CONFIG:Debug>:Debug>DLL" \
